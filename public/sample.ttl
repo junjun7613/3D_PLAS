@@ -1,0 +1,164 @@
+#https://jo-fil-ho.com/MicroKnowledge/graveStone.glb
+#https://jo-fil-ho.com/MicroKnowledge/test_1.glb
+
+
+@prefix three: <https://junjun7613.github.io/MicroKnowledge/3dplas.owl#> .
+@prefix threeEntity: <https://junjun7613.github.io/MicroKnowledge/3dplas/entity/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+#forum
+threeEntity:ObjectGrp_1 a three:ObjectGrp;
+    rdfs:label "forum";
+    three:hasModelfile <https://jo-fil-ho.com/MicroKnowledge/test_1.glb>;
+    three:consistsOf threeEntity:ObjectGrp_1_Object057, threeEntity:ObjectGrp_1_Object059, threeEntity:ObjectGrp_1_Object2490. 
+
+threeEntity:ObjectGrp_1_Space_1 a three:Space;
+    rdfs:label "temple of Mars Ultor";
+    three:hasAnnotation threeEntity:ObjectGrp_1_Space_1_annotation_1;
+    three:hasInterpretation threeEntity:ObjectGrp_1_Space_1_interpretation_1;
+    three:isConstrainedBy threeEntity:ObjectGrp_1_Object057, threeEntity:ObjectGrp_1_Object059, threeEntity:ObjectGrp_1_Object2490.
+
+threeEntity:ObjectGrp_1_Space_1_annotation_1 a three:Annotation;
+    three:annotationPage <https://jo-fil-ho.com/MicroKnowledge/Republic2Monarchy.html>;
+    dc:description "";
+    three:annotationTitle "Annotation Title 1".
+
+threeEntity:ObjectGrp_1_Space_1_interpretation_1 a three:Interpretation;
+    three:hasPeriod [three:begin "-2"; three:end "500"];
+    three:hasStratigraphicUnit three:USVs.
+
+threeEntity:ObjectGrp_1_Object057 a three:Object;
+    rdfs:label "Object.057";
+    three:isConstraintOf threeEntity:ObjectGrp_1_Space_1;
+    three:hasAnnotation threeEntity:Annotation_ObjectGrp_1_Object057_1;
+    three:hasInterpretation threeEntity:Interpretation_ObjectGrp_1_Object057_1. 
+
+threeEntity:Annotation_ObjectGrp_1_Object057_1 a three:Annotation;
+    three:annotationPage <https://jo-fil-ho.com/MicroKnowledge/Republic2Monarchy.html>;
+    three:annotationTitle "Annotation Title 1".
+
+threeEntity:Interpretation_ObjectGrp_1_Object057_1 a three:Interpretation;
+    three:hasPeriod [three:begin "-2"; three:end "500"];
+    three:hasStratigraphicUnit three:USVs.
+
+threeEntity:ObjectGrp_1_Object059 a three:Object;
+    rdfs:label "Object.059";
+    three:isConstraintOf threeEntity:ObjectGrp_1_Space_1;
+    three:hasAnnotation threeEntity:Annotation_ObjectGrp_1_Object059_1;
+    three:hasInterpretation threeEntity:Interpretation_ObjectGrp_1_Object059_1. 
+
+threeEntity:Annotation_ObjectGrp_1_Object059_1 a three:Annotation;
+    three:annotationPage <https://jo-fil-ho.com/MicroKnowledge/Republic2Monarchy.html>;
+    three:annotationTitle "Annotation Title 1".
+
+threeEntity:Interpretation_ObjectGrp_1_Object059_1 a three:Interpretation;
+    three:hasPeriod [three:begin "-2"; three:end "300"];
+    three:hasStratigraphicUnit three:SU.
+
+threeEntity:ObjectGrp_1_Object2490 a three:Object;
+    rdfs:label "Object.2490";
+    three:isConstraintOf threeEntity:ObjectGrp_1_Space_1;
+    three:hasAnnotation threeEntity:Annotation_ObjectGrp_1_Object2490_1;
+    three:hasAnnotation threeEntity:Annotation_ObjectGrp_1_Object2490_2;
+    three:hasInterpretation threeEntity:Interpretation_ObjectGrp_1_Object2490_1. 
+
+threeEntity:Annotation_ObjectGrp_1_Object2490_1 a three:Annotation;
+    three:annotationPage <https://jo-fil-ho.com/MicroKnowledge/Republic2Monarchy.html>;
+    dc:description "";
+    three:annotationTitle "Annotation Title 1".
+
+threeEntity:Annotation_ObjectGrp_1_Object2490_2 a three:Annotation;
+    three:annotationPage <https://jo-fil-ho.com/MicroKnowledge/Republic2Monarchy.html>;
+    dc:description "";
+    three:annotationTitle "Annotation Title 2".
+
+threeEntity:Interpretation_ObjectGrp_1_Object2490_1 a three:Interpretation;
+    three:hasPeriod [three:begin "-2"; three:end "1000"];
+    three:hasStratigraphicUnit three:SU.
+
+#graveStone
+threeEntity:ObjectGrp_2 a three:ObjectGrp;
+    rdfs:label "graveStone";
+    three:hasModelfile <https://jo-fil-ho.com/MicroKnowledge/graveStone.glb>;
+    three:consistsOf threeEntity:ObjectGrp_2_Mesh_0. 
+
+threeEntity:ObjectGrp_2_Mesh_0 a three:Object;
+    rdfs:label "Mesh_0";
+    three:hasAnnotation threeEntity:Annotation_ObjectGrp_2_Mesh_0_1;
+    three:hasAnnotation threeEntity:Annotation_ObjectGrp_2_Mesh_0_2;
+    three:hasInterpretation threeEntity:Interpretation_ObjectGrp_2_Mesh_0.
+
+threeEntity:Annotation_ObjectGrp_2_Mesh_0_1 a three:Annotation;
+    three:annotationPage <https://jo-fil-ho.com/MicroKnowledge/Republic2Monarchy.html>;
+    dc:description "";
+    three:annotationTitle "Annotation Title 1".
+
+threeEntity:Annotation_ObjectGrp_2_Mesh_0_2 a three:Annotation;
+    three:annotationPage <https://jo-fil-ho.com/MicroKnowledge/Republic2Monarchy.html>;
+    dc:description "";
+    three:annotationTitle "Annotation Title 2".
+
+threeEntity:Interpretation_ObjectGrp_2_Mesh_0 a three:Interpretation;
+    three:hasPeriod [three:begin "-1600"; three:end "2000"];
+    three:hasSource threeEntity:SourceInfo_ObjectGrp_2_Mesh_0_1;
+    three:hasStratigraphicUnit three:SU.
+
+threeEntity:SourceInfo_ObjectGrp_2_Mesh_0_1 a three:SourceInformation;
+    three:hasSourceType three:Secondary;
+    dc:title "ILN, V, n. 602.";
+    dc:creator "André Pelletier";
+    dc:date "2001";
+    three:hasSourceMedia three:Literature.
+
+#inscription1
+threeEntity:ObjectGrp_3 a three:ObjectGrp;
+    rdfs:label "inscription1";
+    three:hasModelfile <https://jo-fil-ho.com/MicroKnowledge/inscription1.glb>;
+    three:consistsOf threeEntity:ObjectGrp_3_inscription_1. 
+
+threeEntity:ObjectGrp_3_inscription_1 a three:Object;
+    rdfs:label "inscription_1";
+    three:hasTextualData <https://jo-fil-ho.com/MicroKnowledge/inscription1_test.xml>;
+    three:hasAnnotation threeEntity:Annotation_ObjectGrp_3_inscription_1_1;
+    three:hasAnnotation threeEntity:Annotation_ObjectGrp_3_inscription_1_2;
+    three:hasAnnotation threeEntity:Annotation_ObjectGrp_3_inscription_1_3;
+    three:hasInterpretation threeEntity:Interpretation_ObjectGrp_3_inscription_1.
+
+threeEntity:Annotation_ObjectGrp_3_inscription_1_1 a three:Annotation;
+    three:annotationPage <https://jo-fil-ho.com/MicroKnowledge/Republic2Monarchy.html>;
+    dc:description "";
+    three:annotationTitle "Annotation Title 1".
+
+threeEntity:Annotation_ObjectGrp_3_inscription_1_2 a three:Annotation;
+    three:annotationPage <https://jo-fil-ho.com/MicroKnowledge/Republic2Monarchy.html>;
+    dc:description "";
+    three:annotationTitle "Annotation Title 2".
+
+threeEntity:Annotation_ObjectGrp_3_inscription_1_3 a three:Annotation;
+    three:annotationPage <https://jo-fil-ho.com/MicroKnowledge/Republic2Monarchy.html>;
+    dc:description "";
+    three:annotationTitle "Annotation Title 3".
+
+threeEntity:Interpretation_ObjectGrp_3_inscription_1 a three:Interpretation;
+    three:hasPeriod [three:begin "100"; three:end "500"];
+    three:hasSource threeEntity:SourceInfo_ObjectGrp_3_inscription_1_1;
+    three:hasSource threeEntity:SourceInfo_ObjectGrp_3_inscription_1_2;
+    three:hasStratigraphicUnit three:USVn.
+
+threeEntity:SourceInfo_ObjectGrp_3_inscription_1_1 a three:SourceInformation;
+    three:hasSourceLink <https://www.academia.edu/43560965/The_Forum_of_Augustus_and_its_instructive_character_the_history_of_Rome_recreated_in_stone>;
+    three:hasSourceType three:Secondary;
+    dc:title "ILN, V, n. 602.";
+    dc:creator "André Pelletier";
+    dc:date "2001";
+    three:hasSourceMedia three:Literature.
+
+threeEntity:SourceInfo_ObjectGrp_3_inscription_1_2 a three:SourceInformation;
+    three:hasSourceLink <https://macsphere.mcmaster.ca/bitstream/11375/11826/1/fulltext.pdf>;
+    three:hasSourceType three:Secondary;
+    dc:title "ILN, V, n. 602.";
+    dc:creator "--- ---";
+    dc:date "19**";
+    three:hasSourceMedia three:Literature.
