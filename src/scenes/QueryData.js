@@ -1,4 +1,7 @@
 import axios from 'axios'
+//import CETEIcean from '../utils/cetei/CETEI.js';
+
+//const CETEI = new CETEIcean();
 
 const url = "https://dydra.com/junjun7613/3dplas/sparql"
 const query =
@@ -114,7 +117,14 @@ for (const datum of data){
     objectDict["interpretation"] = interpretationList;
 
     //テキスト関連の情報を追加
-    if (datum.textualData){};
+    if (datum.textualData){
+        /*
+        CETEIcean.getHTML5("./xml/inscription1_test.xml", function(data) {
+            //document.getElementById("TEI").appendChild(data)
+            console.log(data)
+          })
+          */
+    };
 
 
     //これまでの全ての情報をobjectGrpに追加
