@@ -139,7 +139,8 @@
         >
           <p class="text-sm text-gray-500 dark:text-gray-400">
             <p v-for="info in pickedInterpretation" class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-5">
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><p class="font-bold">Period:</p> {{info.period.begin}}~{{info.period.end}}</p>
+              <!--<p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><p class="font-bold">Period:</p> {{info.period.begin}}~{{info.period.end}}</p>-->
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><p class="font-bold">Period:</p> {{info.begin}}~{{info.end}}</p>
               <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><p class="font-bold">Stratigraphy:</p> {{info.type}}</p>
               <a href="#" class="buttonResearch inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 pointer-events-auto" @click="showResearchContent(info)">
               Sources
@@ -239,8 +240,9 @@ import BabylonScene from "./components/BabylonScene.vue";
 //import objectDataOrig from "./scenes/objectData.js";
 //import objectDataOrig from "./scenes/objectDataEdo.js";
 //import objectDataOrig from './scenes/objectDataVeda.js';
-import objectDataOrig from './scenes/objectData_test.js';
-//import objectDataOrig from './scenes/objectData_test_dining.js';
+
+//import objectDataOrig from './scenes/objectData_test.js';
+import objectDataOrig from './scenes/QueryData.js';
 
 const pickedMesh = ref("");
 const pickedData = ref("");
@@ -259,7 +261,9 @@ const change = (val: string) => {
   console.log(val);
   pickedMesh.value = val;
 
-  const objectData = objectDataOrig.objectData;
+  //const objectData = objectDataOrig.objectData;
+  const objectData = objectDataOrig;
+
   //console.log(objectData)
   for (const object of objectData) {
     const meshes = object.meshes;

@@ -8,8 +8,8 @@ import "@babylonjs/loaders";
 //import objectDataOrig from './objectData.js';
 //import objectDataOrig from './objectDataEdo.js';
 //import objectDataOrig from './objectDataVeda.js';
-import objectDataOrig from './objectData_test.js';
-import testData from './QueryData.js';
+//import objectDataOrig from './objectData_test.js';
+import objectDataOrig from './QueryData.js';
 
 //import objectDataOrig from './objectData_test_dining.js';
 
@@ -23,10 +23,10 @@ const myScene = {
         const scene = new Scene(engine);
         myScene.engine = engine;
         myScene.scene = scene;
-        const objectData = objectDataOrig["objectData"]
-        //const objectData = testData;
+        //const objectData = objectDataOrig["objectData"]
+        const objectData = objectDataOrig;
 
-        console.log({testData});
+        console.log({objectDataOrig});
 
         //const camera = new ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2, 10, Vector3.Zero(), scene);
         const camera = new FreeCamera("camera", new BABYLON.Vector3(0, 2, -20));
@@ -77,15 +77,15 @@ const myScene = {
 
                     const meshType = objectData[i].meshes[k].type
 
-                    const planePositions = objectData[i].meshes[k].textPlane.textPlanePosition
+                    //const planePositions = objectData[i].meshes[k].textPlane.textPlanePosition
 
-                    const textFont = objectData[i].meshes[k].textPlane.textFont
+                    //const textFont = objectData[i].meshes[k].textPlane.textFont
 
-                    const transcriptions = objectData[i].meshes[k].transcriptions
+                    //const transcriptions = objectData[i].meshes[k].transcriptions
 
                     const annotation = objectData[i].meshes[k].annotation
 
-                    const detailCardPosition = objectData[i].meshes[k].detailCardPosition
+                    //const detailCardPosition = objectData[i].meshes[k].detailCardPosition
 
                     const metaData = objectData[i].meshes[k].interpretation
 
@@ -106,6 +106,7 @@ const myScene = {
                     const origMaterial = mesh.material
                     console.log(origMaterial)
 
+                    /*
                     //transcription表示関係
                     for (const transcription of transcriptions) {
                         const texts = transcription.texts
@@ -185,242 +186,6 @@ const myScene = {
                     };
 
                     myScene.planeNameList = listPlaneName;
-
-                    const anno_list = []
-                    /*
-                    for (const anno of annotation) {
-
-                        const anno_map = {}
-                        anno_map.position = anno.position;
-                        anno_map.scale = anno.scale;
-
-                        console.log(anno.contentImage.length)
-                        console.log(anno.position.x)
-
-                        var font_type = "Arial";
-                        //const planeWidth = 2;
-                        const planeWidth = anno.scale.y * 40;
-                        //const planeHeight = 2;
-                        const planeHeight = anno.scale.y * 40;
-
-
-                        //視点に追随するviewerを表示する場合
-
-                        var advancedTextureDetail = AdvancedDynamicTexture.CreateFullscreenUI("UI");
-
-
-                        var sv = new ScrollViewer();
-                        sv.thickness = 2;
-                        sv.color = "black";
-                        sv.height = 0.2;
-                        sv.width = 0.6;
-                        sv.background = "white";
-                        sv.isVisible = false;
-
-                        advancedTextureDetail.addControl(sv);
-
-                        var tb = new TextBlock();
-                        //tb.textWrapping = true;
-                        //tb.textWrapping = GUI.TextWrapping.WordWrap;
-                        tb.resizeToFit = true;
-                        //tb.height = 2;
-                        //tb.width = 2;
-                        tb.paddingTop = "1%";
-                        tb.paddingLeft = "10px";
-                        tb.paddingRight = "22%"
-                        tb.paddingBottom = "1%";
-                        //tb.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
-                        //tb.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
-                        //tb.textHorizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
-                        //tb.textVerticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
-                        tb.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_LEFT;
-                        tb.verticalAlignment = Control.VERTICAL_ALIGNMENT_TOP;
-                        tb.textHorizontalAlignment = Control.HORIZONTAL_ALIGNMENT_LEFT;
-                        tb.textVerticalAlignment = Control.VERTICAL_ALIGNMENT_TOP;
-                        tb.color = "black";
-                        //tb.isVisible = false;
-
-                        tb.text = anno.note;
-                        //tb.text = "TEXT START Lorem ipsum dolor sit amet, postea petentium et eum."
-
-                        //tb.fontSize = anno.scale.y * 1500
-                        //tb.fontSize = planeHeight * 30
-                        tb.fontSize = 16
-
-
-                        //テスト、イメージを含むsv構築
-                        var makeSVImage = function () {
-                            var advancedTexture = AdvancedDynamicTexture.CreateFullscreenUI("UI");
-
-                            var SVImgae = new ScrollViewer();
-                            SVImgae.thickness = 5;
-                            SVImgae.color = "black";
-                            SVImgae.width = "800px";
-                            SVImgae.height = "500px";
-                            SVImgae.background = "white";
-                            SVImgae.isVisible = false;
-
-                            advancedTexture.addControl(SVImgae);
-
-                            var gd = new Grid();
-                            gd.width = "700px";
-                            console.log(anno.contentImage.length)
-
-                            const rowNumber = anno.contentImage.length + 1;
-
-                            //console.log(rowNumber)
-                            gd.height = String(rowNumber * 400) + "px";
-                            gd.paddingTop = "15%";
-                            //gd.addColumnDefinition(1 / 3);
-                            //gd.addColumnDefinition(1 / 3);
-                            //gd.addColumnDefinition(1 / 3);
-                            gd.addColumnDefinition(7 / 10);
-                            gd.addColumnDefinition(3 / 10);
-
-                            if (anno.contentImage.length !== 0) {
-                                for (let i = 0; i < anno.contentImage.length + 1; i++) {
-                                    gd.addRowDefinition(1 / anno.contentImage.length + 1);
-                                };
-                            } else {
-                                gd.addRowDefinition(1 / 1);
-                            };
-
-
-                            SVImgae.addControl(gd);
-
-                            let backButton = Button.CreateSimpleButton("but1", "Back");
-                            backButton.width = "100px";
-                            backButton.height = "50px";
-                            backButton.color = "black";
-                            backButton.background = "black";
-                            //button1.paddingLeft = "90%";
-                            backButton.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_CENTER;
-                            backButton.color = "white";
-                            backButton.fontSize = 16;
-                            backButton.onPointerUpObservable.add(function () {
-                                //alert("you did it!");
-                                console.log(gd)
-                                if (SVImage.isVisible == false) {
-                                    SVImage.isVisible = true;
-                                } else {
-                                    SVImage.isVisible = false;
-                                }
-                            });
-                            gd.addControl(backButton, 0, 0)
-
-                            if (anno.contentImage.length !== 0) {
-
-                                for (const [index, value] of anno.contentImage.entries()) {
-                                    console.log([index, value])
-
-                                    var image = new Image("but", value["item"]);
-                                    //image.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
-                                    image.width = 0.9;
-                                    image.height = 0.9;
-                                    //image.populateNinePatchSlicesFromImage = true;
-                                    //image.stretch = BABYLON.GUI.Image.STRETCH_NINE_PATCH;
-                                    image.stretch = Image.STRETCH_UNIFORM;
-
-                                    var text = new TextBlock();
-                                    text.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_CENTER;
-                                    //text.text = "Hello!\nHello!\nHello!\nHello!";
-                                    text.text = `Note: ${value.note}`;
-                                    text.fontSize = 16;
-                                    //text.textWrapping = true;
-
-                                    gd.addControl(image, index + 1, 0);
-                                    gd.addControl(text, index + 1, 1);
-                                    console.log(index + 1);
-
-                                }
-                            } else {
-                                var text = new TextBlock();
-                                text.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_CENTER;
-                                text.text = "No Image!";
-                                //text.textWrapping = true;
-                                gd.addControl(text, 0, 1)
-                            };
-
-                            return SVImgae;
-                        };
-
-                        const SVImage = makeSVImage()
-                        console.log(SVImage)
-
-                        let imageButton = Button.CreateSimpleButton("but1", "Image");
-                        imageButton.width = 0.3;
-                        imageButton.height = "50px";
-                        //button1.paddingLeft = "90%";
-                        imageButton.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_RIGHT;
-                        imageButton.color = "white";
-                        imageButton.fontSize = 16;
-                        imageButton.background = "green";
-                        imageButton.paddingTop = "1%";
-                        imageButton.paddingBottom = "5%";
-                        imageButton.paddingLeft = "10%";
-                        imageButton.onPointerUpObservable.add(function () {
-                            
-                            if (SVImage.isVisible == false) {
-                                SVImage.isVisible = true;
-                            } else {
-                                SVImage.isVisible = false;
-                            }
-                            
-                        });
-                        //listButtons.push(button)
-
-                        sv.addControl(tb)
-                        sv.addControl(imageButton)
-
-                        //anno_map.plane = plane;
-                        anno_map.sv = sv;
-                        anno_list.push(anno_map)
-                    }
-                    
-                    for (const anno of anno_list) {
-                        console.log(anno)
-                        var button = MeshBuilder.CreateCylinder("button", { radius: 0.5, height: 0.2 }, scene)
-
-                        button.position.y = objectPosition.y + anno.position.y;
-                        button.position.x = objectPosition.x + anno.position.x;
-                        button.position.z = objectPosition.z + anno.position.z;
-                        //button.position.y = mesh.absolutePosition.y + anno.position.y;
-                        //button.position.x = mesh.absolutePosition.x + anno.position.x;
-                        //button.position.z = mesh.absolutePosition.z + anno.position.z;
-
-                        //button.scaling.x = anno.scale.x;
-                        //button.scaling.y = anno.scale.y;
-                        //button.scaling.z = anno.scale.z;
-                        button.scaling.x = mesh.scaling.x * 0.5;
-                        button.scaling.y = mesh.scaling.y * 0.5;
-                        button.scaling.z = mesh.scaling.z * 0.5;
-                        button.rotation.y = Math.PI / 1;
-                        button.rotation.x = Math.PI / -2;
-                        button.rotation.z = Math.PI / 1;
-                        button.setParent(mesh)
-
-                        button.material = new StandardMaterial("mat_button", scene);
-                        //button.material.diffuseColor = BABYLON.Color3.Random();
-                        button.material.diffuseTexture = new Texture("./textures/comment.png");
-                        //button.material.diffuseTexture = new BABYLON.Texture("https://jo-fil-ho.com/babylonJS/comment.png");
-                        console.log(button)
-
-                        // add actionManager on each cyl
-                        button.actionManager = new ActionManager(scene);
-                        // register 'pickCylinder' as the handler function for cylinder picking action.
-                        button.actionManager.registerAction(
-                            new ExecuteCodeAction(ActionManager.OnPickTrigger, function () {
-
-                                if (anno.sv.isVisible === false) {
-                                    anno.sv.isVisible = true;
-                                } else {
-                                    anno.sv.isVisible = false;
-                                }
-
-                            })
-                        );
-                        listButtons.push(button)
-                    }
                     */
 
                 }

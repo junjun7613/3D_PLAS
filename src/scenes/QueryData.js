@@ -11,7 +11,8 @@ prefix dc: <http://purl.org/dc/elements/1.1/>
 select distinct * where {
     ?objectGrp rdfs:label ?objectGrpName.
     ?objectGrp three:hasModelfile ?file.
-    FILTER (?file = <https://jo-fil-ho.com/MicroKnowledge/test_1.glb> || ?file = <https://jo-fil-ho.com/MicroKnowledge/graveStone.glb> || ?file = <https://jo-fil-ho.com/MicroKnowledge/inscription1.glb>)
+    #FILTER (?file = <https://jo-fil-ho.com/MicroKnowledge/test_1.glb> || ?file = <https://jo-fil-ho.com/MicroKnowledge/graveStone.glb> || ?file = <https://jo-fil-ho.com/MicroKnowledge/inscription1.glb>)
+    FILTER (?file = "test_1.glb" || ?file = "graveStone.glb" || ?file = "inscription1.glb")
     ?objectGrp three:consistsOf ?object.
     ?object rdfs:label ?objectName.
     ?object three:hasInterpretation ?interpretation.
@@ -112,8 +113,11 @@ for (const datum of data){
     interpretationList.push(interpretation)
     objectDict["interpretation"] = interpretationList;
 
+    //テキスト関連の情報を追加
+    if (datum.textualData){};
 
-    //これまでの全ての情報をobjectDictに追加
+
+    //これまでの全ての情報をobjectGrpに追加
     for (const objectGrp of newObjectGrps){
         if (objectGrp["name"] == datum.objectGrp) {
             objectGrp["meshes"].push(objectDict);

@@ -11,7 +11,8 @@
 #forum
 threeEntity:ObjectGrp_1 a three:ObjectGrp;
     rdfs:label "forum";
-    three:hasModelfile <https://jo-fil-ho.com/MicroKnowledge/test_1.glb>;
+    #three:hasModelfile <https://jo-fil-ho.com/MicroKnowledge/test_1.glb>;
+    three:hasModelfile "test_1.glb";
     three:consistsOf threeEntity:ObjectGrp_1_Object057, threeEntity:ObjectGrp_1_Object059, threeEntity:ObjectGrp_1_Object2490. 
 
 threeEntity:ObjectGrp_1_Space_1 a three:Space;
@@ -81,7 +82,8 @@ threeEntity:Interpretation_ObjectGrp_1_Object2490_1 a three:Interpretation;
 #graveStone
 threeEntity:ObjectGrp_2 a three:ObjectGrp;
     rdfs:label "graveStone";
-    three:hasModelfile <https://jo-fil-ho.com/MicroKnowledge/graveStone.glb>;
+    #three:hasModelfile <https://jo-fil-ho.com/MicroKnowledge/graveStone.glb>;
+    three:hasModelfile "graveStone.glb";
     three:consistsOf threeEntity:ObjectGrp_2_Mesh_0. 
 
 threeEntity:ObjectGrp_2_Mesh_0 a three:Object;
@@ -116,7 +118,8 @@ threeEntity:SourceInfo_ObjectGrp_2_Mesh_0_1 a three:SourceInformation;
 #inscription1
 threeEntity:ObjectGrp_3 a three:ObjectGrp;
     rdfs:label "inscription1";
-    three:hasModelfile <https://jo-fil-ho.com/MicroKnowledge/inscription1.glb>;
+    #three:hasModelfile <https://jo-fil-ho.com/MicroKnowledge/inscription1.glb>;
+    three:hasModelfile "inscription1.glb";
     three:consistsOf threeEntity:ObjectGrp_3_inscription_1. 
 
 threeEntity:ObjectGrp_3_inscription_1 a three:Object;
