@@ -1,5 +1,5 @@
 import axios from 'axios'
-//import CETEIcean from '../utils/cetei/CETEI.js';
+//import CETEIcean from 'utils/cetei/CETEI';
 
 //const CETEI = new CETEIcean();
 
