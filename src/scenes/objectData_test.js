@@ -4,30 +4,6 @@ const objectData = [
         id: "forum",
         url: "test_1.glb",
         image: [{item:"./textures/20140615_192225.png",caption:"image"},{item:"./textures/20140615_192225.png",caption:"image"},{item:"./textures/20140615_192225.png",caption:"image"}],
-        annotation: [
-            {
-                position: { x: -6.75, y: 6.5, z: 83 },
-                title:"annotation title 1",
-                page: "./htmls/Republic2Monarchy.html",
-                note: "entrance of the forum",
-            },
-        ],
-        interpretation: [{
-            period:{
-                begin:-2,
-                end:500,
-            },
-            type: "USVs",
-            sourceInformations: [{
-                item:
-                {},
-                itemDetail:
-                {},
-                itemImage: [],
-                positionObject:{}
-            }
-            ]
-        }],
         //objectPosition:{x:-15,y:-4.96,z:-4},
         objectPosition: { x: 0, y: 0.01, z: -20 },
         //objectPosition:{x:0,y:0,z:0},
@@ -138,36 +114,6 @@ const objectData = [
         id: "graveStone",
         url: "graveStone.glb",
         image: [{item:"./textures/20140615_192225.png",caption:"image"},{item:"./textures/20140615_192225.png",caption:"image"},{item:"./textures/20140615_192225.png",caption:"image"}],
-        annotation: [
-            {
-                position: { x: 0.2, y: 1.5, z: -0.2 },
-                title:"annotation title 1",
-                page: "./htmls/Republic2Monarchy.html",
-                note: "some flowers\non the top",
-            },
-            {
-                position: { x: 0, y: 1.4, z: -0.3 },
-                title:"annotation title 2",
-                page: "./htmls/Republic2Monarchy.html",
-                note: "stones are placed\non the eges of the stone",
-            },
-        ],
-        interpretation: [{
-            period:{
-                begin:-2,
-                end:500,
-            },
-            type: "USVs",
-            sourceInformations: [{
-                item:
-                {},
-                itemDetail:
-                {},
-                itemImage: [],
-                positionObject:{}
-            }
-            ]
-        }],
         //objectPosition:{x:-15,y:-4.96,z:-4},
         objectPosition: { x: 2.5, y: -0.03, z: 3 },
         //objectPosition:{x:0,y:0,z:0},
@@ -348,30 +294,6 @@ const objectData = [
         id: "inscription1",
         url: "inscription1.glb",
         image: [{item:"./textures/20140615_192225.png",caption:"image"},{item:"./textures/20140615_192225.png",caption:"image"},{item:"./textures/20140615_192225.png",caption:"image"}],
-        annotation: [
-            {
-                position: { x: -6.75, y: 6.5, z: 83 },
-                title:"annotation title 1",
-                page: "./htmls/Republic2Monarchy.html",
-                note: "entrance of the forum",
-            },
-        ],
-        interpretation: [{
-            period:{
-                begin:-2,
-                end:500,
-            },
-            type: "USVs",
-            sourceInformations: [{
-                item:
-                {},
-                itemDetail:
-                {},
-                itemImage: [],
-                positionObject:{}
-            }
-            ]
-        }],
         objectPosition: { x: 0.7, y: -4.98, z: 3 },
         objectRotation: { x: -0.5045, y: -0.505, z: 0.501 },
         meshes: [{
@@ -612,30 +534,6 @@ const objectData = [
         id: "inscription2",
         url: "inscription2.glb",
         image: [{item:"./textures/20140615_192225.png",caption:"image"},{item:"./textures/20140615_192225.png",caption:"image"},{item:"./textures/20140615_192225.png",caption:"image"}],
-        annotation: [
-            {
-                position: { x: -6.75, y: 6.5, z: 83 },
-                title:"annotation title 1",
-                page: "./htmls/Republic2Monarchy.html",
-                note: "entrance of the forum",
-            },
-        ],
-        interpretation: [{
-            period:{
-                begin:-2,
-                end:500,
-            },
-            type: "USVs",
-            sourceInformations: [{
-                item:
-                {},
-                itemDetail:
-                {},
-                itemImage: [],
-                positionObject:{}
-            }
-            ]
-        }],
         //objectPosition:{x:-13,y:-2.23,z:11},
         objectPosition: { x: -0.5, y: -2.24, z: 3.5 },
         objectRotation: { x: 0.5, y: -2.05, z: 0.5 },

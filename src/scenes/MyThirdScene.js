@@ -24,8 +24,7 @@ const myScene = {
         myScene.engine = engine;
         myScene.scene = scene;
         const objectData = objectDataOrig["objectData"]
-        
-        // const textData = testData.test
+        //const objectData = testData;
 
         console.log({testData});
 
@@ -47,6 +46,7 @@ const myScene = {
 
         for (let i = 0; i < objectData.length; i++) {
             const resolve = SceneLoader.ImportMeshAsync("", "./models/", objectData[i].url).then(function (result) {
+            //const resolve = SceneLoader.ImportMeshAsync("", "", objectData[i].url).then(function (result) {
                 //object全体の位置を決定
                 console.log(result)
                 const object = result.meshes[0]
@@ -604,7 +604,7 @@ const myScene = {
                         header.text = text + Math.trunc(value);
 
                         //ここにモデルの出し消しを記述すればよいか？
-                        if (mesh.meshOrig.interpretation[0].period.begin < Math.trunc(value) && Math.trunc(value) < mesh.meshOrig.interpretation[0].period.end) {
+                        if (mesh.meshOrig.interpretation[0].begin < Math.trunc(value) && Math.trunc(value) < mesh.meshOrig.interpretation[0].end) {
                             mesh.meshScene.isVisible = true;
                         } else {
                             mesh.meshScene.isVisible = false;

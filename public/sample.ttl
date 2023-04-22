@@ -106,6 +106,7 @@ threeEntity:Interpretation_ObjectGrp_2_Mesh_0 a three:Interpretation;
     three:hasStratigraphicUnit three:SU.
 
 threeEntity:SourceInfo_ObjectGrp_2_Mesh_0_1 a three:SourceInformation;
+    three:hasSourceLink <https://www.academia.edu/43560965/The_Forum_of_Augustus_and_its_instructive_character_the_history_of_Rome_recreated_in_stone>;
     three:hasSourceType three:Secondary;
     dc:title "ILN, V, n. 602.";
     dc:creator "André Pelletier";
@@ -142,7 +143,7 @@ threeEntity:Annotation_ObjectGrp_3_inscription_1_3 a three:Annotation;
     three:annotationTitle "Annotation Title 3".
 
 threeEntity:Interpretation_ObjectGrp_3_inscription_1 a three:Interpretation;
-    three:hasPeriod [three:begin "100"; three:end "500"];
+    three:hasPeriod [three:begin "300"; three:end "500"];
     three:hasSource threeEntity:SourceInfo_ObjectGrp_3_inscription_1_1;
     three:hasSource threeEntity:SourceInfo_ObjectGrp_3_inscription_1_2;
     three:hasStratigraphicUnit three:USVn.
