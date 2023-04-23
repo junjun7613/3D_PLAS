@@ -275,16 +275,22 @@ const change = (val: string) => {
       if (mesh.meshName === val) {
         pickedData.value = mesh;
         //console.log(pickedData.value)
+
         pickedImage.value = mesh.image;
         //console.log(pickedImage.value)
+
         pickedAnnotation.value = mesh.annotation;
         console.log(pickedAnnotation.value)
+
         pickedText.value = mesh.transcriptions;
         console.log(pickedText.value)
+
         pickedMeta.value = mesh.interpretation.sourceInformations;
         console.log(pickedMeta.value)
+
         pickedInterpretation.value = mesh.interpretation;
         //console.log(pickedInterpretation.value)
+        
         pickedObject.value = object;
         //console.log(pickedObject.value)
       }

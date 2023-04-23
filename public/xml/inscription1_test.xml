@@ -30,7 +30,7 @@
     </standOff>
     <sourceDoc rend="3D">
         <surfaceGrp xml:id="inscription1" type="3Dobject">
-            <figure><graphic url="--URI of a 3D object--"/></figure>
+            <figure><graphic url="inscription1.glb"/></figure>
             <surface xml:id="sf_00" type="position">
                 <zone xml:id="z_01_sf_00" ulx="-0.02" uly="5.51" ana="z:-0.27" rotX="0" rotY="0" rot-Z="0"/>
                 <zone xml:id="z_02_sf_00" ulx="-0.02" uly="5.41" ana="z:-0.27" rotX="0" rotY="0" rot-Z="0"/>

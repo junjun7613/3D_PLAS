@@ -19,6 +19,7 @@
     "babylonjs": "^5.43.0",
     "babylonjs-gui": "^5.43.0",
     "babylonjs-materials": "^5.43.0",
+    "CETEIcean": "^1.7.3",
     "flowbite": "^1.6.3",
     "vue": "^3.2.45",
     "vue-info-card": "^0.1.4",

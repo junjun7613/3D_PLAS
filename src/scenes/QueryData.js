@@ -1,7 +1,7 @@
 import axios from 'axios'
-//import CETEIcean from 'utils/cetei/CETEI';
+import CETEI from 'CETEIcean';
 
-//const CETEI = new CETEIcean();
+const CETEIcean = new CETEI();
 
 const url = "https://dydra.com/junjun7613/3dplas/sparql"
 const query =
@@ -118,12 +118,20 @@ for (const datum of data){
 
     //テキスト関連の情報を追加
     if (datum.textualData){
-        /*
         CETEIcean.getHTML5("./xml/inscription1_test.xml", function(data) {
             //document.getElementById("TEI").appendChild(data)
-            console.log(data)
+            const langs = data.querySelector('tei-body').children
+            for (const lang of langs){
+                //console.log(lang.getAttribute('xml:lang'));
+                const langName = lang.getAttribute('xml:lang');
+                //console.log(lang.getAttribute('corresp').replaceAll("#","").split(" "))
+                const wits = lang.getAttribute('corresp').replaceAll("#","").split(" ");
+
+                for (const wit of wits){
+                    console.log(wit)
+                };
+            };
           })
-          */
     };
 
 
