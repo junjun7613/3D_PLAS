@@ -127,9 +127,21 @@ for (const datum of data){
                 //console.log(lang.getAttribute('corresp').replaceAll("#","").split(" "))
                 const wits = lang.getAttribute('corresp').replaceAll("#","").split(" ");
 
+                const texts = [];
+
                 for (const wit of wits){
-                    console.log(wit)
+                    const witness = {};
+                    for (const witTag of data.querySelectorAll('tei-witness')){
+                        if (witTag.getAttribute('xml:id') == wit){
+                            witness["data"] = witTag;
+                        }else{
+                            ;
+                        };
+                    };
+                    texts.push(witness)
                 };
+
+                console.log(texts);
             };
           })
     };
