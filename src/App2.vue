@@ -449,6 +449,10 @@ const hideAnnotationContent = function(){
 //const textLines = [];
 
 const showTextContent = function(textLang,text){
+
+    console.log(textLang);
+    console.log(text);
+
     const page = document.getElementById('text');
     const content = document.getElementById('textContent')
     //alert(info.itemDetail.note)
@@ -461,18 +465,6 @@ const showTextContent = function(textLang,text){
     note_head.classList.add("font-bold")
     note_head.classList.add("mb-3")
     newElement1.appendChild(note_head);
-
-    for (const t of text.text){
-      console.log(text.text)
-      var line=document.createElement('p');
-      line.textContent=t.t;
-      line.addEventListener("mouseover", function(){
-        PlaneName.value = (textLang.lang).replace(" ","")+(text.author).replace(" ","")+text.year+String(text.text.indexOf(t));
-        console.log(PlaneName.value)
-        //line.setAttribute("style","background-color:#000;")
-      });
-      newElement1.appendChild(line);
-    };
 
     content.appendChild(newElement1);
 

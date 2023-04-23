@@ -119,11 +119,14 @@ for (const datum of data){
     //テキスト関連の情報を追加
     if (datum.textualData){
         CETEIcean.getHTML5("./xml/inscription1_test.xml", function(data) {
+            const transcriptions = [];
             //document.getElementById("TEI").appendChild(data)
             const langs = data.querySelector('tei-body').children
             for (const lang of langs){
+                const langDict = {};
                 //console.log(lang.getAttribute('xml:lang'));
                 const langName = lang.getAttribute('xml:lang');
+                langDict['lang'] = langName;
                 //console.log(lang.getAttribute('corresp').replaceAll("#","").split(" "))
                 const wits = lang.getAttribute('corresp').replaceAll("#","").split(" ");
 
@@ -133,7 +136,10 @@ for (const datum of data){
                     const witness = {};
                     for (const witTag of data.querySelectorAll('tei-witness')){
                         if (witTag.getAttribute('xml:id') == wit){
-                            witness["data"] = witTag;
+                            witness["wit"] = wit;
+                            witness["author"] = witTag.querySelector('tei-name').textContent;
+                            witness["title"] = witTag.querySelector('tei-title').textContent;
+                            witness["year"] = witTag.querySelector('tei-when').textContent;
                         }else{
                             ;
                         };
@@ -142,8 +148,13 @@ for (const datum of data){
                 };
 
                 console.log(texts);
+                langDict["texts"] = texts;
+                transcriptions.push(langDict)
             };
-          })
+            console.log(transcriptions)
+            objectDict["transcriptions"] = transcriptions;
+          }
+        )
     };
 
 
