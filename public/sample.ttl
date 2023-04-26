@@ -1,7 +1,3 @@
-#https://jo-fil-ho.com/MicroKnowledge/graveStone.glb
-#https://jo-fil-ho.com/MicroKnowledge/test_1.glb
-
-
 @prefix three: <https://junjun7613.github.io/MicroKnowledge/3dplas.owl#> .
 @prefix threeEntity: <https://junjun7613.github.io/MicroKnowledge/3dplas/entity/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .

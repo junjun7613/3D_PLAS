@@ -11,6 +11,7 @@
         <h3 class="object-name">Object Name</h3>
         <p class="object-name-text">{{ pickedObject.id }}</p>
       </div>
+      <!--
       <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
         <ul
           class="flex flex-wrap -mb-px text-sm font-medium text-center"
@@ -60,6 +61,7 @@
           </li>
         </ul>
       </div>
+      --->
       <!--<div id="myObjectTabContent"></div>-->
 
       <div class="shadow-lg">
@@ -247,6 +249,7 @@ import CETEI from 'CETEIcean';
 
 const CETEIcean = new CETEI();
 
+
 const pickedMesh = ref("");
 const pickedData = ref("");
 const pickedImage = ref("");
@@ -271,26 +274,19 @@ const change = (val: string) => {
   for (const object of objectData) {
     const meshes = object.meshes;
     for (const mesh of meshes) {
-      console.log(mesh);
-      if (mesh.meshName === val) {
+      if (pickedMesh.value == mesh.meshName) {
         pickedData.value = mesh;
         //console.log(pickedData.value)
-
         pickedImage.value = mesh.image;
         //console.log(pickedImage.value)
-
         pickedAnnotation.value = mesh.annotation;
-        console.log(pickedAnnotation.value)
-
+        //console.log(pickedAnnotation.value)
         pickedText.value = mesh.transcriptions;
-        console.log(pickedText.value)
-
+        //console.log(pickedText.value)
         pickedMeta.value = mesh.interpretation.sourceInformations;
-        console.log(pickedMeta.value)
-
+        //console.log(pickedMeta.value)
         pickedInterpretation.value = mesh.interpretation;
         //console.log(pickedInterpretation.value)
-        
         pickedObject.value = object;
         //console.log(pickedObject.value)
       }
@@ -458,6 +454,12 @@ const showTextContent = function(textLang,text){
     //alert(info.itemDetail.note)
     var newElement1=document.createElement('div');
     newElement1.setAttribute("id","textLines")
+
+    CETEIcean.getHTML5("./xml/inscription1_test.xml", function(data) {
+      const div = data.querySelector('tei-body').children[0]
+      //console.log(div);
+      newElement1.append(div);
+    });
 
     var note_head=document.createElement('h5');
     note_head.textContent="TEXT"
@@ -639,7 +641,7 @@ const closeModal = function(){
   font-weight: bold;
 }
 #myTabContent{
-  height: 220px;
+  height: 300px;
 }
 #myObjectTabContent{
   height: 120px;
