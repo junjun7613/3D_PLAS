@@ -1,0 +1,7 @@
+tei-ex:before {
+  content: "(";
+}
+
+tei-ex:after {
+  content: ")";
+}

@@ -6,28 +6,28 @@
                 <bibl type="article">
                     <author>
                         <name>André Pelletier</name>
-                    </author>
+                   </author>
                     <title>Title of Article</title>
                     <when when="2001">2001</when>
                     <note></note>
                     <bibl type="book">
                         <title>Inscriptions latines de Narbonnaise, V-2</title>
                         <editor></editor>
-                    </bibl>
-                </bibl>
-            </witness>
+                   </bibl>
+               </bibl>
+           </witness>
             <witness xml:id="wit_2">
                 <bibl type="article">
                     <author>
                         <name>Jun Ogawa</name>
-                    </author>
+                   </author>
                     <title>Title of Article</title>
                     <when when="2023">2023</when>
                     <note></note>
-                </bibl>
-            </witness>
-        </listWit>
-    </standOff>
+               </bibl>
+           </witness>
+       </listWit>
+   </standOff>
     <sourceDoc rend="3D">
         <surfaceGrp xml:id="inscription1" type="3Dobject">
             <figure><graphic url="inscription1.glb"/></figure>
@@ -37,59 +37,61 @@
                 <zone xml:id="z_03_sf_00" ulx="-0.02" uly="5.31" ana="z:-0.27" rotX="0" rotY="0" rot-Z="0"/>
                 <zone xml:id="z_04_sf_00" ulx="-0.02" uly="5.21" ana="z:-0.27" rotX="0" rotY="0" rot-Z="0"/>
                 <zone xml:id="z_05_sf_00" ulx="-0.25" uly="5.51" ana="z:-0.3" rotX="0" rotY="0" rot-Z="0"/>
-            </surface>
-        </surfaceGrp>
-    </sourceDoc>
+           </surface>
+       </surfaceGrp>
+   </sourceDoc>
     <text>
         <body>
             <div type="edition" xml:lang="lat" corresp="#wit_1 #wit_2">
                 <p>
                     <div unit="line" n="1" xml:id="z_01_sf_01" corresp="#z_01_sf_00">
-                        <expan><abbr><c xml:id="c_0001" corresp="#z_05_sf_00">L</c></abbr><ex>ucio </ex></expan> <app><lem wit="#wit_1"><expan><abbr><c xml:id="c_0002" corresp="#z_06_sf_00">I</c><c xml:id="c_0003" corresp="#z_07_sf_00">u</c><c xml:id="c_0004" corresp="#z_08_sf_00">l</c></abbr><ex>io </ex></expan></lem><rdg wit="#wit_2"><exapn><abbr><c xml:id="c_0005" corresp="#z_06_sf_00">I</c><c xml:id="c_0006" corresp="#z_07_sf_00">u</c><c xml:id="c_0007" corresp="#z_08_sf_00">l</c></abbr><ex>ius </ex></exapn></rdg></app> <c xml:id="c_0008" corresp="#z_09_sf_00">F</c><c xml:id="c_0009" corresp="#z_10_sf_00">r</c><c xml:id="c_0011" corresp="#z_11_sf_00">o</c><c xml:id="c_0011" corresp="#z_12_sf_00">n</c><c xml:id="c_0012" corresp="#z_13_sf_00">t</c><c xml:id="c_0013">o</c><c xml:id="c_0014" corresp="#z_14_sf_00">n</c><c xml:id="c_0015" corresp="#z_15_sf_00">i</c>
-                    </div>
+                        <lb/>
+                        <expan><abbr><c xml:id="c_0001" corresp="#z_05_sf_00">L</c></abbr><ex>ucio</ex></expan> <app><lem wit="#wit_1"><expan><abbr><c xml:id="c_0002" corresp="#z_06_sf_00">I</c><c xml:id="c_0003" corresp="#z_07_sf_00">u</c><c xml:id="c_0004" corresp="#z_08_sf_00">l</c></abbr><ex>io</ex></expan></lem><rdg wit="#wit_2"><exapn><abbr><c xml:id="c_0005" corresp="#z_06_sf_00">I</c><c xml:id="c_0006" corresp="#z_07_sf_00">u</c><c xml:id="c_0007" corresp="#z_08_sf_00">l</c></abbr><ex>ius</ex></exapn></rdg></app> <c xml:id="c_0008" corresp="#z_09_sf_00">F</c><c xml:id="c_0009" corresp="#z_10_sf_00">r</c><c xml:id="c_0011" corresp="#z_11_sf_00">o</c><c xml:id="c_0011" corresp="#z_12_sf_00">n</c><c xml:id="c_0012" corresp="#z_13_sf_00">t</c><c xml:id="c_0013">o</c><c xml:id="c_0014" corresp="#z_14_sf_00">n</c><c xml:id="c_0015" corresp="#z_15_sf_00">i</c>
+                   </div>
                     <div unit="line" n="2" xml:id="z_02_sf_01" corresp="#z_02_sf_00">
-                        <expan><abbr><c xml:id="c_0016" corresp="#z_15_sf_00">p</c><c xml:id="c_0017" corresp="#z_15_sf_00">r</c><c xml:id="c_0018" corresp="#z_15_sf_00">a</c><c xml:id="c_0019" corresp="#z_15_sf_00">e</c><c xml:id="c_0020" corresp="#z_15_sf_00">c</c><c xml:id="c_0021" corresp="#z_15_sf_00">f</c></abbr><ex>ecto </ex></expan> <expan><abbr><c xml:id="c_0022" corresp="#z_15_sf_00">e</c><c xml:id="c_0023" corresp="#z_15_sf_00">q</c><c xml:id="c_0024" corresp="#z_15_sf_00">u</c><c xml:id="c_0025" corresp="#z_15_sf_00">i</c><c xml:id="c_0026" corresp="#z_15_sf_00">t</c></abbr><ex>um</ex></expan>
-                    </div>
+                        <lb/>
+                        <expan><abbr><c xml:id="c_0016" corresp="#z_15_sf_00">p</c><c xml:id="c_0017" corresp="#z_15_sf_00">r</c><c xml:id="c_0018" corresp="#z_15_sf_00">a</c><c xml:id="c_0019" corresp="#z_15_sf_00">e</c><c xml:id="c_0020" corresp="#z_15_sf_00">c</c><c xml:id="c_0021" corresp="#z_15_sf_00">f</c></abbr><ex>ecto</ex></expan> <expan><abbr><c xml:id="c_0022" corresp="#z_15_sf_00">e</c><c xml:id="c_0023" corresp="#z_15_sf_00">q</c><c xml:id="c_0024" corresp="#z_15_sf_00">u</c><c xml:id="c_0025" corresp="#z_15_sf_00">i</c><c xml:id="c_0026" corresp="#z_15_sf_00">t</c></abbr><ex>um</ex></expan>
+                   </div>
                     <div unit="line" n="3" xml:id="z_03_sf_01" corresp="#z_03_sf_00">
-                        <c xml:id="c_0027" corresp="#z_15_sf_00">I</c><c xml:id="c_0028" corresp="#z_15_sf_00">I</c><c xml:id="c_0029" corresp="#z_15_sf_00">I</c><c xml:id="c_0030" corresp="#z_15_sf_00">I </c><app><lem wit="#wit_1"><expan><abbr><c xml:id="c_0031" corresp="#z_15_sf_00">v</c><c xml:id="c_0032" corresp="#z_15_sf_00">i</c><c xml:id="c_0032" corresp="#z_15_sf_00">r</c></abbr><ex>o </ex></expan></lem><rdg wit="#wit_2"><expan><abbr><c xml:id="c_0015" corresp="#z_33_sf_00">v</c><c xml:id="c_0034" corresp="#z_15_sf_00">i</c><c xml:id="c_0035" corresp="#z_15_sf_00">r</c></abbr><ex>orum </ex></expan></rdg></app> <expan><abbr><c xml:id="c_0036" corresp="#z_15_sf_00">i</c><c xml:id="c_0037" corresp="#z_15_sf_00">t</c><c xml:id="c_0038" corresp="#z_15_sf_00">e</c><c xml:id="c_0039" corresp="#z_15_sf_00">r</c></abbr><ex>um</ex></expan>
-                    </div>
+                        <c xml:id="c_0027" corresp="#z_15_sf_00">I</c><c xml:id="c_0028" corresp="#z_15_sf_00">I</c><c xml:id="c_0029" corresp="#z_15_sf_00">I</c><c xml:id="c_0030" corresp="#z_15_sf_00">I</c><app><lem wit="#wit_1"><expan><abbr><c xml:id="c_0031" corresp="#z_15_sf_00">v</c><c xml:id="c_0032" corresp="#z_15_sf_00">i</c><c xml:id="c_0032" corresp="#z_15_sf_00">r</c></abbr><ex>o</ex></expan></lem><rdg wit="#wit_2"><expan><abbr><c xml:id="c_0015" corresp="#z_33_sf_00">v</c><c xml:id="c_0034" corresp="#z_15_sf_00">i</c><c xml:id="c_0035" corresp="#z_15_sf_00">r</c></abbr><ex>orum</ex></expan></rdg></app> <expan><abbr><c xml:id="c_0036" corresp="#z_15_sf_00">i</c><c xml:id="c_0037" corresp="#z_15_sf_00">t</c><c xml:id="c_0038" corresp="#z_15_sf_00">e</c><c xml:id="c_0039" corresp="#z_15_sf_00">r</c></abbr><ex>um</ex></expan>
+                   </div>
                     <div unit="line" n="4" xml:id="z_04_sf_01" corresp="#z_04_sf_00">
-                        <c xml:id="c_0040" corresp="#z_15_sf_00">V</c><c xml:id="c_0041" corresp="#z_15_sf_00">i</c><c xml:id="c_0042" corresp="#z_15_sf_00">c</c><c xml:id="c_0043" corresp="#z_15_sf_00">a</c><c xml:id="c_0044" corresp="#z_15_sf_00">n</c><c xml:id="c_0045" corresp="#z_15_sf_00">i </c> <expan><abbr><c xml:id="c_0046" corresp="#z_15_sf_00">A</c><c xml:id="c_0047" corresp="#z_15_sf_00">u</c><c xml:id="c_0048" corresp="#z_15_sf_00">g</c><c xml:id="c_0049" corresp="#z_15_sf_00">u</c><c xml:id="c_0050" corresp="#z_15_sf_00">s</c><c xml:id="c_0051" corresp="#z_15_sf_00">t</c></abbr><ex>ani </ex></expan>
-                    </div>
-                </p>
-            </div>
+                        <c xml:id="c_0040" corresp="#z_15_sf_00">V</c><c xml:id="c_0041" corresp="#z_15_sf_00">i</c><c xml:id="c_0042" corresp="#z_15_sf_00">c</c><c xml:id="c_0043" corresp="#z_15_sf_00">a</c><c xml:id="c_0044" corresp="#z_15_sf_00">n</c><c xml:id="c_0045" corresp="#z_15_sf_00">i</c> <expan><abbr><c xml:id="c_0046" corresp="#z_15_sf_00">A</c><c xml:id="c_0047" corresp="#z_15_sf_00">u</c><c xml:id="c_0048" corresp="#z_15_sf_00">g</c><c xml:id="c_0049" corresp="#z_15_sf_00">u</c><c xml:id="c_0050" corresp="#z_15_sf_00">s</c><c xml:id="c_0051" corresp="#z_15_sf_00">t</c></abbr><ex>ani</ex></expan>
+                   </div>
+               </p>
+           </div>
             <div type="translation" xml:lang="fr" corresp="#wit_1">
                 <p>
                     <div unit="line" n="1" xml:id="z_01_sf_02" corresp="#z_01_sf_00">
                     À Lucius Iulius Fronto,
-                    </div>
+                   </div>
                     <div unit="line" n="2" xml:id="z_02_sf_02" corresp="#z_02_sf_00">
                     Préfet des cavaliers,
-                    </div>
+                   </div>
                     <div unit="line" n="3" xml:id="z_03_sf_02" corresp="#z_03_sf_00">
                     quattuorvir à deux reprises.
-                    </div>
+                   </div>
                     <div unit="line" n="4" xml:id="z_04_sf_02" corresp="#z_04_sf_00">
                     Les habitants du bourg d'Aoste.
-                    </div>
-                </p>
-            </div>
+                   </div>
+               </p>
+           </div>
             <div type="translation" xml:lang="ja" corresp="#wit_2">
                 <p>
                     <div unit="line" n="1" xml:id="z_01_sf_03" corresp="#z_01_sf_00">
                     ルキウス・ユリウス・フロントへ
-                    </div>
+                   </div>
                     <div unit="line" n="2" xml:id="z_02_sf_03" corresp="#z_02_sf_00">
                     騎兵隊長
-                    </div>
+                   </div>
                     <div unit="line" n="3" xml:id="z_03_sf_03" corresp="#z_03_sf_00">
                     四人委員を二回務めた。
-                    </div>
+                   </div>
                     <div unit="line" n="4" xml:id="z_04_sf_03" corresp="#z_04_sf_00">
                     ウィクス・アウグストゥムの住人が（捧げる）。
-                    </div>
-                </p>
-            </div>
-        </body>
-    </text>
+                   </div>
+               </p>
+           </div>
+       </body>
+   </text>
 </TEI>

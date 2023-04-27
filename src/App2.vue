@@ -441,13 +441,31 @@ const hideAnnotationContent = function(){
 }
 
 //text内容表示
+let tei: any = null
 
 //const textLines = [];
-
 const showTextContent = function(textLang,text){
+    /*
+    var c = new CETEI();
+    c.addBehaviors({"tei":{
+        "ex": ["(",")"]
+      }});
 
-    console.log(textLang);
-    console.log(text);
+      c.getHTML5("./xml/inscription1_test.xml", function(data) {
+      // const div = data.querySelector('tei-body').children[0]
+      tei = data
+      //console.log(div);
+      // newElement1.append(div);
+    });
+    */
+
+    //毎回読み込んでいるが、一度読み込んだら読み込まないようにしたい。その場合、2回目以降にnullになってしまった。
+    CETEIcean.getHTML5("./xml/inscription1_test.xml", function(data) {
+      // const div = data.querySelector('tei-body').children[0]
+      tei = data
+      //console.log(div);
+      // newElement1.append(div);
+    });    
 
     const page = document.getElementById('text');
     const content = document.getElementById('textContent')
@@ -455,14 +473,25 @@ const showTextContent = function(textLang,text){
     var newElement1=document.createElement('div');
     newElement1.setAttribute("id","textLines")
 
-    CETEIcean.getHTML5("./xml/inscription1_test.xml", function(data) {
-      const div = data.querySelector('tei-body').children[0]
-      //console.log(div);
-      newElement1.append(div);
-    });
+    //言語を指定して、divを取得する。
+    const div = tei.querySelector(`[xml\\:lang="${textLang.lang}"]`)
+
+    const wit = text.wit
+    
+    // wit attrを持つelmeentsを取得する
+    const elements = div.querySelectorAll(`*[wit]`)
+    for(const e of elements) {
+      // witに含まれていない場合は削除する
+      const wits = e.getAttribute('wit').split(' ').map(w => w.replace("#",""))
+      if(!wits.includes(wit)) {
+        e.remove()
+      }
+    }
+
+    newElement1.append(div);
 
     var note_head=document.createElement('h5');
-    note_head.textContent="TEXT"
+    // note_head.textContent="TEXT"
     note_head.classList.add("text-center")
     note_head.classList.add("font-bold")
     note_head.classList.add("mb-3")
