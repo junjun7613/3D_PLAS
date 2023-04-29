@@ -5,3 +5,8 @@ tei-ex:before {
 tei-ex:after {
   content: ")";
 }
+
+tei-line:after {
+  content: " / ";
+  white-space: pre;
+}

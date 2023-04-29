@@ -460,7 +460,8 @@ const showTextContent = function(textLang,text){
     */
 
     //毎回読み込んでいるが、一度読み込んだら読み込まないようにしたい。その場合、2回目以降にnullになってしまった。
-    CETEIcean.getHTML5("./xml/inscription1_test.xml", function(data) {
+    //CETEIcean.getHTML5("./xml/inscription1_test.xml", function(data) {
+    CETEIcean.getHTML5("./xml/inscription1.xml", function(data) {
       // const div = data.querySelector('tei-body').children[0]
       tei = data
       //console.log(div);
